@@ -5,7 +5,7 @@
 }
 
 .background {
-    background-color: rgb(26, 25, 25);
+    background: linear-gradient(120deg, #5e5e5e, #2c2c2c);
     height: 100vh;
     padding: 1px;
 }
@@ -49,11 +49,11 @@
 }
 
 .playerX {
-    color: rgb(224, 104, 24);
+    color: rgb(24, 144, 224);
 }
 
 .playerO {
-    color: rgb(161, 24, 224);
+    color: rgb(224, 221, 24);
 }
 
 .controls {
@@ -63,8 +63,9 @@
     align-items: center;
     margin-top: 1em;
 }
+
 #reset {
-    background-color: #0d3b9e;
+    background-color: #9e0d0d;
     color: rgb(230, 230, 230);
     padding: 8px;
     border-radius: 8px;
