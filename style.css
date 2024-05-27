@@ -49,11 +49,11 @@
 }
 
 .playerX {
-    color: rgb(224, 24, 24);
+    color: rgb(224, 104, 24);
 }
 
 .playerO {
-    color: rgb(64, 224, 24);
+    color: rgb(161, 24, 224);
 }
 
 #reset {
