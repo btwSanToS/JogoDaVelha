@@ -56,6 +56,13 @@
     color: rgb(161, 24, 224);
 }
 
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
 #reset {
     background-color: #0d3b9e;
     color: rgb(230, 230, 230);
