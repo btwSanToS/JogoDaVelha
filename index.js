@@ -1,12 +1,12 @@
 window.addEventListener('DOMContentLoaded', () =>{
     
     const tiles = Array.from(document.querySelectorAll('.tile'));
-    const playerDisplay = document.querySelector('display-player');
+    const playerDisplay = document.querySelector('.display-player');
     const resetButton = document.querySelector('#reset');
-    const announcer = document.querySelector('announcer');
+    const announcer = document.querySelector('.announcer');
 
     let board = ['','','','','','','','',''];
-    let currentPlayer = 'X'
+    let currentPlayer = 'X';
     let isGameActive = true;
 
     const PLAYERX_WON = 'PLAYERX_WON';
@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', () =>{
     }
 
     const announce = (type) =>{
-        switch (type){
+        switch(type){
             case PLAYERO_WON: 
             announcer.innerHTML = 'Player <span class="playerO">O</span> Won';
                 break;
@@ -82,16 +82,16 @@ window.addEventListener('DOMContentLoaded', () =>{
     }
 
     const changePlayer = () => {
-        playerDisplay.classList.remove(`player ${currentPlayer}`);
+        playerDisplay.classList.remove(`player${currentPlayer}`);
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         playerDisplay.innerText = currentPlayer;
-        playerDisplay.classList.add(`player ${currentPlayer}`);
+        playerDisplay.classList.add(`player${currentPlayer}`);
     }
 
     const userAction = (tile, index) => {
         if(isValidAction(tile) && isGameActive){
             tile.innerText = currentPlayer;
-            tile.classList,add(`player ${currentPlayer}`);
+            tile.classList.add(`player${currentPlayer}`);
             updateBoard(index);
             handleResultValidation();
             changePlayer();
