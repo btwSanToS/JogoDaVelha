@@ -69,6 +69,16 @@ window.addEventListener('DOMContentLoaded', () =>{
                 announcer.innnerText = 'Tie';
         }
         announcer.classList.remove('hide');
+    };
+
+    const isValidAction = (tile)=> {
+        if(tile.innerText === 'X' || tile.innerText === 'O'){
+            return false;
+        }
+    }
+
+    const updateBoard = (index) =>{
+        board[index] = currentPlayer;
     }
 
     const changePlayer = () => {
@@ -86,6 +96,23 @@ window.addEventListener('DOMContentLoaded', () =>{
             handleResultValidation();
             changePlayer();
         }
+    }
+
+    const resetBoard = () => {
+        board = ['', '', '', '', '', '', '', '', '',];
+        isGameActive = true;
+        announcer.classList.add('hide');
+
+        if(currentPlayer === 'O'){
+            changePlayer();
+        }
+
+        tiles.forEach(tile => {
+            tile.innerText = '';
+            tile.classList.remove('PlayerX');
+            tile.classList.remove('PlayerO');
+        })
+
     }
 
     tiles.forEach((tile, index) => {
